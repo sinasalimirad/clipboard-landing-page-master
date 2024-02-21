@@ -6,8 +6,8 @@ This is a solution to the [Clipboard landing page challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/sinasalimirad/clipboard-landing-page-master/)
+- Live Site URL: [Add live site URL here](https://sinasalimirad.github.io/clipboard-landing-page-master/)
 
 ## Author
 
