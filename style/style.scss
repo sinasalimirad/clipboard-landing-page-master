@@ -1,0 +1,374 @@
+// ========== Google Font ==========
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;700&display=swap');
+
+// ========== Variable ==========
+$Strong-Cyan: hsl(171, 66%, 44%);
+$Light-Blue: hsl(233, 100%, 69%);
+$Dark-Grayish-Blue: hsl(210, 10%, 33%);
+$Grayish-Blue: hsl(201, 11%, 66%);
+$SVG-color: hsl(210, 10%, 33%);
+$White: hsl(0, 0%, 100%);
+$bai-jamjuree-medium: 500;
+$bai-jamjuree-bold: 700;
+
+// ========== Mixin ==========
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin iOS_btn {
+    background-color: $Strong-Cyan;
+    box-shadow: 0 3px hsl(171, 66%, 38%);
+}
+
+@mixin Mac_btn {
+    background-color: $Light-Blue;
+    box-shadow: 0 3px hsl(233, 100%, 63%);
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+// ========== Base ==========
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Bai Jamjuree", sans-serif;
+    overflow-x: hidden;
+}
+
+h1,h2,h3 {
+    color: $Dark-Grayish-Blue;
+    font-weight: $bai-jamjuree-bold;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+h3 {
+    font-size: 24px;
+    padding-top: 1rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    color: $White;
+    border: none;
+    outline: none;
+    padding: 0.9rem 2.7rem;
+    border-radius: 1.5rem;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: $bai-jamjuree-medium;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+// ========== Header ==========
+header {
+    width: 100%;
+    height: 363px;
+    background: url(/images/bg-header-desktop.png) no-repeat center center/cover;
+    @include center;
+}
+
+// ========== Main ==========
+main {
+    article {
+        &:first-child {
+            padding-bottom: 10rem;
+        }
+
+        &:nth-child(2),
+        &:nth-child(5) {
+            padding-bottom: 2rem;
+        }
+
+        &:nth-child(4),
+        &:last-child {
+            padding-bottom: 6rem;
+        }
+
+        @include center;
+        flex-direction: column;
+
+        .text {
+            padding: 1rem 0rem 3rem 0rem;
+            width: 49rem;
+            text-align: center;
+            font-size: 20px;
+            color: $Grayish-Blue;
+            line-height: 2rem;
+        }
+
+        img {
+            width: 75%;
+            height: 75%;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        .btn__download {
+            display: flex;
+            gap: 1rem;
+
+            .iOS {
+                @include iOS_btn;
+            }
+
+            .Mac {
+                @include Mac_btn;
+            }
+        }
+    }
+
+    .container {
+        padding-bottom: 10rem;
+        display: flex;
+        gap: 2rem;
+
+        img {
+            transform: translateX(-2rem);
+            width: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        .col {
+            @include column;
+            gap: 2rem;
+
+            .row {
+                @include column;
+                gap: 0.5rem;
+
+                p {
+                    width: 350px;
+                    line-height: 2rem;
+                    color: $Grayish-Blue;
+                }
+            }
+        }
+    }
+
+    .rows {
+        @include wrap;
+        gap: 2rem;
+
+        .col {
+            @include column;
+            align-items: center;
+            width: 350px;
+            text-align: center;
+            gap: 1rem;
+
+            img {
+                width: 36px;
+            }
+
+            p {
+                line-height: 2rem;
+                color: $Grayish-Blue;
+            }
+        }
+    }
+
+    .logos {
+        padding: 10rem 4rem;
+        @include wrap;
+        gap: 6rem;
+    }
+}
+
+// ========== Footer ==========
+footer {
+    padding: 2rem 6rem;
+    background-color: hsla(201, 11%, 66%, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        width: 54px;
+    }
+
+    ul {
+        display: flex;
+        gap: 4rem;
+
+        li {
+            @include column;
+            gap: 1rem;
+            
+            a {
+                color: $Dark-Grayish-Blue;
+
+                &:hover {
+                    color: $Strong-Cyan;
+                }
+            }
+        }
+    }
+    
+    .social {
+        display: flex;
+        gap: 2rem;
+
+        svg {
+            fill: $SVG-color;
+
+            &:hover {
+                fill: $Strong-Cyan;
+            }
+        }
+    }
+}
+
+// ========== Breakpoint ==========
+@media (max-width : 992px) {
+    h1,h2,h3 {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 36px;
+        width: 24.5rem;
+    }
+
+    h2 {
+        width: 24.5rem;
+    }
+
+    main {
+        article {
+            .text {
+                width: 24.5rem;
+            }
+
+            .btn__download {
+                flex-direction: column;
+                max-width: 24rem;
+                width: 100%;
+                gap: 1.5rem;
+            }
+        }
+
+        .container {
+            flex-direction: column;
+            align-items: center;
+    
+            img {
+                transform: translateX(0rem);
+            }
+    
+            .col {
+                text-align: center;
+                .row {
+                    p {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {        
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+
+        ul {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .social {
+            gap: 2.5rem;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    h1 {
+        font-size: 30px;
+        width: 20rem;
+    }
+
+    h2 {
+        font-size: 26px;
+        width: 20rem;
+    }
+
+    header {
+        width: 375px;
+        background: url(/images/bg-header-mobile.png) no-repeat center center/cover;
+    }
+
+    main {
+        article {
+            .text {
+                width: 20rem;
+            }
+
+            .btn__download {
+                max-width: 20rem;
+            }
+        }
+
+        .container {
+            .col {
+                align-items: center;
+                text-align: center;
+
+                img {
+                    width: 80%;
+                }
+            
+                .row {
+                    p {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+
+        .rows {
+            .col {
+                width: 325px;
+            }
+        }
+    }
+}

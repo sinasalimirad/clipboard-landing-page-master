@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  color: hsl(210, 10%, 33%);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 38px;
+}
+
+h3 {
+  font-size: 24px;
+  padding-top: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  color: hsl(0, 0%, 100%);
+  border: none;
+  outline: none;
+  padding: 0.9rem 2.7rem;
+  border-radius: 1.5rem;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+header {
+  width: 100%;
+  height: 363px;
+  background: url(/images/bg-header-desktop.png) no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main article:first-child {
+  padding-bottom: 10rem;
+}
+main article:nth-child(2), main article:nth-child(5) {
+  padding-bottom: 2rem;
+}
+main article:nth-child(4), main article:last-child {
+  padding-bottom: 6rem;
+}
+main article .text {
+  padding: 1rem 0rem 3rem 0rem;
+  width: 49rem;
+  text-align: center;
+  font-size: 20px;
+  color: hsl(201, 11%, 66%);
+  line-height: 2rem;
+}
+main article img {
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+  object-position: center center;
+}
+main article .btn__download {
+  display: flex;
+  gap: 1rem;
+}
+main article .btn__download .iOS {
+  background-color: hsl(171, 66%, 44%);
+  box-shadow: 0 3px hsl(171, 66%, 38%);
+}
+main article .btn__download .Mac {
+  background-color: hsl(233, 100%, 69%);
+  box-shadow: 0 3px hsl(233, 100%, 63%);
+}
+main .container {
+  padding-bottom: 10rem;
+  display: flex;
+  gap: 2rem;
+}
+main .container img {
+  transform: translateX(-2rem);
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+main .container .col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .container .col .row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .container .col .row p {
+  width: 350px;
+  line-height: 2rem;
+  color: hsl(201, 11%, 66%);
+}
+main .rows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+main .rows .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  text-align: center;
+  gap: 1rem;
+}
+main .rows .col img {
+  width: 36px;
+}
+main .rows .col p {
+  line-height: 2rem;
+  color: hsl(201, 11%, 66%);
+}
+main .logos {
+  padding: 10rem 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 6rem;
+}
+
+footer {
+  padding: 2rem 6rem;
+  background-color: hsla(201, 11%, 66%, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer img {
+  width: 54px;
+}
+footer ul {
+  display: flex;
+  gap: 4rem;
+}
+footer ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer ul li a {
+  color: hsl(210, 10%, 33%);
+}
+footer ul li a:hover {
+  color: hsl(171, 66%, 44%);
+}
+footer .social {
+  display: flex;
+  gap: 2rem;
+}
+footer .social svg {
+  fill: hsl(210, 10%, 33%);
+}
+footer .social svg:hover {
+  fill: hsl(171, 66%, 44%);
+}
+
+@media (max-width: 992px) {
+  h1, h2, h3 {
+    text-align: center;
+  }
+  h1 {
+    font-size: 36px;
+    width: 24.5rem;
+  }
+  h2 {
+    width: 24.5rem;
+  }
+  main article .text {
+    width: 24.5rem;
+  }
+  main article .btn__download {
+    flex-direction: column;
+    max-width: 24rem;
+    width: 100%;
+    gap: 1.5rem;
+  }
+  main .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .container img {
+    transform: translateX(0rem);
+  }
+  main .container .col {
+    text-align: center;
+  }
+  main .container .col .row p {
+    width: 300px;
+  }
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+  footer ul {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  footer .social {
+    gap: 2.5rem;
+  }
+}
+@media (max-width: 425px) {
+  h1 {
+    font-size: 30px;
+    width: 20rem;
+  }
+  h2 {
+    font-size: 26px;
+    width: 20rem;
+  }
+  header {
+    width: 375px;
+    background: url(/images/bg-header-mobile.png) no-repeat center center/cover;
+  }
+  main article .text {
+    width: 20rem;
+  }
+  main article .btn__download {
+    max-width: 20rem;
+  }
+  main .container .col {
+    align-items: center;
+    text-align: center;
+  }
+  main .container .col img {
+    width: 80%;
+  }
+  main .container .col .row p {
+    width: 300px;
+  }
+  main .rows .col {
+    width: 325px;
+  }
+}
